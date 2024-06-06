@@ -1,7 +1,5 @@
 {
 	"name": "esbuild",
 	"version": "0.0.6",
-	"exports": {
-		".": "./start.js"
-	}
+	"exports": "./start.js"
 }
