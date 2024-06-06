@@ -1,4 +1,5 @@
 {
+    "name": "@raha.group/esbuild",
 	"main": "./start.js",
 	"type": "module",
 	"bin": "./start.js"
