@@ -1,0 +1,16 @@
+{
+	"name": "esbuild",
+	"version": "0.0.5",
+	"exports": {
+		"": "./start.js"
+	},
+	
+	"description": "Use esbuild without installing",
+	"keywords": [
+		"esbuild",
+		"cli",
+		"portable",
+		"deploy"
+	],
+	"license": "CC-BY-SA-4.0"
+}

@@ -1,0 +1,15 @@
+{
+	"name": "@raha.group/esbuild",
+	"version": "0.0.5",
+	"description": "Use esbuild without installing",
+	"main": "./start.js",
+	"bin": "./start.js",
+	"type": "module",
+	"keywords": [
+		"esbuild",
+		"cli",
+		"portable",
+		"deploy"
+	],
+	"license": "CC-BY-SA-4.0"
+}
