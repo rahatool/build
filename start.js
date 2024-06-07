@@ -1,4 +1,4 @@
-let { parseArgs } = await import(`https://deno.land/std/cli/parse_args.ts`);
+let { parseArgs } = await import(`https://raw.githubusercontent.com/denoland/deno_std/0.224.0/cli/parse_args.ts`);
 let inputFile = Deno.args[0];
 let options = parseArgs(Deno.args, {
 	boolean: [`minify`, `bundle`],
@@ -41,10 +41,10 @@ let httpExtension = {
 };
 let build = async () => {
 	if (!esbuild) {
-		esbuild = await import(`https://esm.sh/esbuild-wasm/esm/browser.js`);
+		esbuild = await import(`https://esm.sh/esbuild-wasm@0.21.4/esm/browser.js`);
 		globalThis.location = { href: Deno.cwd() };
 		await esbuild.initialize({
-			wasmURL: `https://esm.sh/esbuild-wasm/esbuild.wasm`,
+			wasmURL: `https://esm.sh/esbuild-wasm@0.21.4/esbuild.wasm`,
 			worker: false,
 		});
 	}
