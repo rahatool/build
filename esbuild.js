@@ -41,10 +41,10 @@ let httpExtension = {
 };
 let build = async () => {
 	if (!esbuild) {
-		esbuild = await import(`https://esm.sh/esbuild-wasm@0.21.4/esm/browser.js`);
+		esbuild = await import(`https://esm.sh/esbuild-wasm@0.21.5/esm/browser.js`);
 		globalThis.location = { href: Deno.cwd() };
 		await esbuild.initialize({
-			wasmURL: `https://esm.sh/esbuild-wasm@0.21.4/esbuild.wasm`,
+			wasmURL: `https://esm.sh/esbuild-wasm@0.21.5/esbuild.wasm`,
 			worker: false,
 		});
 	}
@@ -82,6 +82,3 @@ if (options.servedir) {
 } else {
 	await Deno.writeFile(options.outfile, (await build()).contents);
 }
-
-// esbuild.cmd ./application.js --minify --charset=utf8 --outfile=application.min.js --format=esm
-// esbuild.cmd application.js --outfile=application.min.js --servedir=./ --bundle --minify --charset=utf8 --format=esm

@@ -2,12 +2,12 @@
 ## Start a web server
 To preview your project, use the following command:
 ```shell
-deno run --allow-net --allow-read https://esm.sh/gh/rahatool/esbuild application.js --outfile=application.min.js --servedir=./ --minify
+deno run --allow-net --allow-read https://esm.sh/gh/rahatool/build application.js --outfile=application.min.js --servedir=./ --minify
 ```
 
 ## Build a JS file
 ```shell
-deno run --allow-read --allow-write --allow-net https://esm.sh/gh/rahatool/esbuild application.js --outfile=application.min.js --minify --bundle
+deno run --allow-read --allow-write --allow-net https://esm.sh/gh/rahatool/build application.js --outfile=application.min.js --minify --bundle
 ```
 
 ## License
