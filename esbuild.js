@@ -41,10 +41,10 @@ let httpExtension = {
 };
 let build = async () => {
 	if (!esbuild) {
-		esbuild = await import(`https://esm.sh/esbuild-wasm@0.21.5/esm/browser.js`);
+		esbuild = await import(`https://esm.sh/esbuild-wasm@0.23.0/esm/browser.js`);
 		globalThis.location = { href: Deno.cwd() };
 		await esbuild.initialize({
-			wasmURL: `https://esm.sh/esbuild-wasm@0.21.5/esbuild.wasm`,
+			wasmURL: `https://esm.sh/esbuild-wasm@0.23.0/esbuild.wasm`,
 			worker: false,
 		});
 	}
