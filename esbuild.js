@@ -11,7 +11,7 @@ let httpExtension = {
 	name: `http file system`,
 	setup: (build) => {
 		build.onResolve(
-			{ filter: /^(https?:)?\/\/|\.js$/g },
+			{ filter: /^(https?:)?\/\/|\.js$/ },
 			(args) => {
 				return {
 					path: args.path,
@@ -20,7 +20,7 @@ let httpExtension = {
 			},
 		);
 		build.onResolve(
-			{ filter: /.*/g, namespace: `http-url` },
+			{ filter: /.*/, namespace: `http-url` },
 			(args) => {
 				return {
 					path: new URL(args.path, args.importer).toString(),
@@ -29,7 +29,7 @@ let httpExtension = {
 			},
 		);
 		build.onLoad(
-			{ filter: /.*/g, namespace: `http-url` },
+			{ filter: /.*/, namespace: `http-url` },
 			async (args) => {
 				return {
 					contents: await (await fetch(args.path)).text(),
